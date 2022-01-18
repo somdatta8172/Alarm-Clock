@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clock</title>
+</head>
+<body>
+    <!-- container which contains all the elements of the app-->
+    <div class="main-container">
+        <!-- container for showing current time  -->
+        <div class="time-show">
+            <span><img class="clock" src="clock.png"></span>
+            <span id="time"></span>
+        </div>
+        <!-- input form to set an alarm time -->
+        <form class="setAlarm">
+            <label class="alarm-heading"><h3>Set Alarm</h3><label><br>
+            <div class="set-alarm-field">
+                <input type="time" name="alarmTime">
+            </div>
+             <!-- buttons for setting and stopping the alarm -->
+            <div class="set-and-stop">
+                <button type="submit" class="set-alarm">Set Alarm</button>
+                <button type="reset" onclick="clearAlarm()" class="clear-alarm">Stop Alarm</button>
+            </div>
+        </form>
+        <!-- upcoming alarms(heading) container -->
+        <div>
+            <h3 class="alarm-heading">Upcoming Alarms</h3>
+        </div>
+        <!-- <container for list of upcoming alarms -->
+        <div>
+            <ul id = "list">
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
